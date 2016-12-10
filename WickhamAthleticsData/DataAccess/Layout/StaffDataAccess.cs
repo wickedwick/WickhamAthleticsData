@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WickhamAthleticsData
+namespace WickhamAthleticsData.DataAccess.Layout
 {
-    public class Class1
+    public class StaffDataAccess
     {
     }
 }
