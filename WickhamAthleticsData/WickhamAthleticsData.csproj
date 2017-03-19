@@ -51,82 +51,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccess\Layout\ContentDataAccess.cs" />
-    <Compile Include="DataAccess\Layout\ImageDataAccess.cs" />
-    <Compile Include="DataAccess\Layout\Panels.cs" />
-    <Compile Include="DataAccess\Layout\StaffDataAccess.cs" />
-    <Compile Include="DataAccess\Layout\VarSetDataAccess.cs" />
-    <Compile Include="Model\Content.cs">
-      <DependentUpon>WickhamAthleticsData.tt</DependentUpon>
+    <Compile Include="DataAccess\Layout\PageDataAccess.cs" />
+    <Compile Include="DataAccess\Layout\PanelDataAccess.cs" />
+    <Compile Include="DataAccess\Layout\RowDataAccess.cs" />
+    <Compile Include="Migrations\201703142322231_InitialCreate.cs" />
+    <Compile Include="Migrations\201703142322231_InitialCreate.Designer.cs">
+      <DependentUpon>201703142322231_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Image.cs">
-      <DependentUpon>WickhamAthleticsData.tt</DependentUpon>
+    <Compile Include="Migrations\201703142336030_InitialCreate1.cs" />
+    <Compile Include="Migrations\201703142336030_InitialCreate1.Designer.cs">
+      <DependentUpon>201703142336030_InitialCreate1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ImageCarousel.cs">
-      <DependentUpon>WickhamAthleticsData.tt</DependentUpon>
+    <Compile Include="Migrations\201703142337252_UpdateAddContent.cs" />
+    <Compile Include="Migrations\201703142337252_UpdateAddContent.Designer.cs">
+      <DependentUpon>201703142337252_UpdateAddContent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Panel.cs">
-      <DependentUpon>WickhamAthleticsData.tt</DependentUpon>
+    <Compile Include="Migrations\201703142346547_UpdateContent.cs" />
+    <Compile Include="Migrations\201703142346547_UpdateContent.Designer.cs">
+      <DependentUpon>201703142346547_UpdateContent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Staff.cs">
-      <DependentUpon>WickhamAthleticsData.tt</DependentUpon>
+    <Compile Include="Migrations\201703142354106_UpdateContent1.cs" />
+    <Compile Include="Migrations\201703142354106_UpdateContent1.Designer.cs">
+      <DependentUpon>201703142354106_UpdateContent1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\TEXT_TYPE_REF.cs">
-      <DependentUpon>WickhamAthleticsData.tt</DependentUpon>
+    <Compile Include="Migrations\201703142354353_UpdateContentAdd.cs" />
+    <Compile Include="Migrations\201703142354353_UpdateContentAdd.Designer.cs">
+      <DependentUpon>201703142354353_UpdateContentAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\VarSet.cs">
-      <DependentUpon>WickhamAthleticsData.tt</DependentUpon>
+    <Compile Include="Migrations\201703150013008_MigrationName.cs" />
+    <Compile Include="Migrations\201703150013008_MigrationName.Designer.cs">
+      <DependentUpon>201703150013008_MigrationName.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\WickhamAthleticsData.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WickhamAthleticsData.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\WickhamAthleticsData.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WickhamAthleticsData.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\WickhamAthleticsData.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WickhamAthleticsData.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\PageRow.cs" />
+    <Compile Include="Model\PanelContent.cs" />
+    <Compile Include="Model\RowPanel.cs" />
+    <Compile Include="Model\WickhamAthleticsData.cs" />
     <Compile Include="Model\WickhamAthleticsDataContext.cs" />
+    <Compile Include="Model\WickPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DataAccess\Base\" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model\WickhamAthleticsData.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>WickhamAthleticsData.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Model\WickhamAthleticsData.edmx.diagram">
-      <DependentUpon>WickhamAthleticsData.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\WickhamAthleticsData.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>WickhamAthleticsData.edmx</DependentUpon>
-      <LastGenOutput>WickhamAthleticsData.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\WickhamAthleticsData.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>WickhamAthleticsData.edmx</DependentUpon>
-      <LastGenOutput>WickhamAthleticsData.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <EmbeddedResource Include="Migrations\201703142322231_InitialCreate.resx">
+      <DependentUpon>201703142322231_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142336030_InitialCreate1.resx">
+      <DependentUpon>201703142336030_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142337252_UpdateAddContent.resx">
+      <DependentUpon>201703142337252_UpdateAddContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142346547_UpdateContent.resx">
+      <DependentUpon>201703142346547_UpdateContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142354106_UpdateContent1.resx">
+      <DependentUpon>201703142354106_UpdateContent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142354353_UpdateContentAdd.resx">
+      <DependentUpon>201703142354353_UpdateContentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703150013008_MigrationName.resx">
+      <DependentUpon>201703150013008_MigrationName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
